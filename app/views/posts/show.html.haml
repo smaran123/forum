@@ -1,4 +1,12 @@
-%h2= @post.title
-%p= @post.content
-= link_to "Edit", edit_post_path(@post)
-= link_to "Destroy", post_path(@post),:method=>:delete, :data=> {:confirm => "are you sure"}
+
+#post_content
+	%h1= @post.title
+	%p= @post.content
+	%br/
+	%hr/
+	%br/
+
+	= link_to "Edit", edit_post_path(@post),class: "button"
+	= link_to "Destroy", post_path(@post),:method=>:delete, :data=> {:confirm => "are you sure"},class: "button"
+
+	
