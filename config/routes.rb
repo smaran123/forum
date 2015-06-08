@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'posts/index'
 
-  get 'posts/new'
-
-  get 'posts/edit'
-
-  resources :posts
+  resources :posts do
+  	resources :comments
+  end
   root "posts#index"
 
   
