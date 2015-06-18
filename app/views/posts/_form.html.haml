@@ -1,5 +1,12 @@
 = simple_form_for @post do |f|
-	= f.input :title
-	= f.input :content
-	%br/
-	= f.submit 
+    = f.input :title
+    = f.input :content
+    -#= show_simple_captcha(:object=>"post")
+    = f.simple_captcha 
+    %br/
+    = f.submit 
+
+
+
+
+

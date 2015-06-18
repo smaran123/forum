@@ -1,24 +1,9 @@
 
-default: &default
+development:
   adapter: mysql2
   encoding: utf8
+  database: forum_development
   pool: 5
   username: root
   password: root
-  socket: /var/run/mysqld/mysqld.sock
 
-development:
-  <<: *default
-  database: forum_development
-
-
-test:
-  <<: *default
-  database: forum_test
-
-
-production:
-  <<: *default
-  database: forum_production
-  username: forum
-  password: <%= ENV['FORUM_DATABASE_PASSWORD'] %>

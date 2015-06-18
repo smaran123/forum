@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml', '~> 4.0.6'
 gem 'devise', '~> 3.5.1'
 gem 'simple_form', '~> 3.1.0'
+gem 'simple_captcha2', require: 'simple_captcha'
 
 group :development, :test do
   gem 'byebug'
