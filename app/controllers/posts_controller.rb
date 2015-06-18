@@ -15,11 +15,16 @@ before_action :set_post, :only=>[:show,:edit,:update,:destroy]
 
 	def create
 		@post = current_user.posts.build(post_params)
-		if @post.save
-			redirect_to @post
+      # if   @post.valid_with_captcha? 
+         
+       if  @post.valid_with_captcha? && @post.save
+         #save_with_captcha
+           
+ 			redirect_to @post
 		else
 			render "new"
 		end
+ 
 	end
 
 	def edit
